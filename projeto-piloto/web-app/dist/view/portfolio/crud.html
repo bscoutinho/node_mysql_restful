@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Portfólio</title>
+    <link rel="stylesheet" href="../../bundle/css.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Teste Node</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../../index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./view/portfolio/crud.html">Cadastro Portfólio</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <br>
+
+    <div class="container">
+
+        <h2>Cadastro de Portfólio</h2>        
+        <div id='msg'></div>
+
+        <div id="listagem">             
+            <button id='btn-exibir-formulario' type="button" class="btn btn-primary">Cadastrar</button>            
+            <br>
+            <br>
+            <div id='portfolios'>
+            </div>
+        </div>
+
+
+        <div id="formulario">
+            <div class="row">
+                <div class="col-sm">                    
+                    <form method="POST" action="/" id="form">
+
+                        <div class="form-group">
+                            <label for="id">Código</label>
+                            <input type="number" class="form-control" id="id" name="id" disabled="disabled">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descricao">Descricao</label>
+                            <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Informe uma descrição.">
+                        </div>
+
+                        <div class="form-group">
+                                <label for="detalhes">Detalhes</label>
+                                <textarea class="form-control" id="detalhes" name="detalhes"></textarea>
+                        </div>                       
+
+                        <div class="form-inline">
+                            <button id='btn-cadastrar-portfolio' type="button" class="btn btn-primary mr-sm-2">Salvar</button>
+                            <button id='btn-cancelar-operacao' type="button" class="btn btn-primary">Cancelar</button>
+                        </div>
+                        <br>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="card">
+            <div class="card-header">
+                API Rest Node com Express com Banco Mysql e Html/Css/Bootstrap/Javascript (Front)
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="../../bundle/babelpolyfill.bundle.js"></script>
+    <script src="../../bundle/index.bundle.js"></script>
+    <script src="../../bundle/portfolioController.bundle.js"></script>
+    
+</body>
+
+</html>
